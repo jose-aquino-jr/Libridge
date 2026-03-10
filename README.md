@@ -23,7 +23,7 @@ O objetivo é criar uma **ponte entre comunicação em Libras e sistemas computa
 
 ## Detecção de mãos
 
-![Detecção](projeto_libras/Images/hand_detection.png.png)
+![Detecção](projeto_libras/Images/hand_detection.png)
 
 ---
 
@@ -335,3 +335,4 @@ Se gostou do projeto:
 🤝 Compartilhe
 
 💡 Contribua
+
