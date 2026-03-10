@@ -1,0 +1,5 @@
+RELATÓRIO DE TREINAMENTO - 2026-02-18 15:03:32.081136
+==================================================
+Melhor modelo: Random Forest
+Acurácia: 1.0000
+Classes: ['A', 'B', 'C', 'D', 'E', 'F', 'G']
