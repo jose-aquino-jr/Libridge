@@ -23,25 +23,25 @@ O objetivo é criar uma **ponte entre comunicação em Libras e sistemas computa
 
 ## Detecção de mãos
 
-![Detecção](Images/hand_detection.png.png)
+![Detecção](projeto_libras/Images/hand_detection.png.png)
 
 ---
 
 ## Interface do coletor de dados
 
-![Coletor](Images/data_collector.png)
+![Coletor](projeto_libras/Images/data_collector.png)
 
 ---
 
 ## Treinamento da IA
 
-![Treinamento](Images/training_accuracy.png)
+![Treinamento](projeto_libras/Images/training_accuracy.png)
 
 ---
 
 ## Matriz de Confusão
 
-![Confusão](Images/confusion_matrix.png)
+![Confusão](projeto_libras/Images/confusion_matrix.png)
 
 ---
 
@@ -333,4 +333,5 @@ Se gostou do projeto:
 
 ⭐ Deixe uma estrela no repositório
 🤝 Compartilhe
+
 💡 Contribua
