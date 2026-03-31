@@ -295,10 +295,10 @@ python detector_tempo_real.py
 
 Interface mostra:
 
-✔ letra detectada  
-✔ confiança  
-✔ FPS  
-✔ landmarks da mão  
+ letra detectada  
+ confiança  
+ FPS  
+ landmarks da mão  
 
 ---
 
