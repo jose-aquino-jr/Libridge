@@ -27,7 +27,7 @@ Para executar o projeto corretamente, recomenda-se:
 - Webcam
 - Sistema operacional: **Windows, Linux ou Mac**
 
-⚠️ Algumas bibliotecas como **TensorFlow** e **MediaPipe** podem apresentar incompatibilidade com versões mais novas do Python.  
+ Algumas bibliotecas como **TensorFlow** e **MediaPipe** podem apresentar incompatibilidade com versões mais novas do Python.  
 Por isso o projeto foi desenvolvido e testado utilizando **Python 3.11**.
 
 Para verificar sua versão do Python:
@@ -68,7 +68,7 @@ python --version
 
 O Libridge funciona em **3 etapas principais**:
 
-### 1️⃣ Coleta de dados
+### 1. Coleta de dados
 
 A webcam captura **sequências de movimento da mão**.
 
@@ -92,7 +92,7 @@ dados/dataset_libras.csv
 
 ---
 
-### 2️⃣ Treinamento da IA
+### 2. Treinamento da IA
 
 A rede neural usa **LSTM (Long Short-Term Memory)** para aprender **movimentos ao longo do tempo**.
 
@@ -118,7 +118,7 @@ Saída:
 
 ---
 
-### 3️⃣ Detecção em tempo real
+### 3. Detecção em tempo real
 
 O sistema:
 
@@ -161,7 +161,7 @@ libridge/
 
 # ⚙️ Instalação
 
-## 1️⃣ Clonar o projeto
+## 1. Clonar o projeto
 
 ```bash
 git clone https://github.com/seu-usuario/libridge.git
@@ -170,7 +170,7 @@ cd libridge
 
 ---
 
-## 2️⃣ Criar ambiente virtual (Python 3.11 recomendado)
+## 2. Criar ambiente virtual (Python 3.11 recomendado)
 
 ### Linux / Mac
 
@@ -188,7 +188,7 @@ venv\Scripts\activate
 
 ---
 
-## 3️⃣ Instalar dependências
+## 3. Instalar dependências
 
 Recomendado usar o comando abaixo para garantir que o **pip correto do ambiente virtual** seja utilizado:
 
@@ -222,7 +222,7 @@ Menu:
 
 ---
 
-# 📊 1️⃣ Coletar dados
+# 1. Coletar dados
 
 Captura sequências de movimentos para treinar a IA.
 
@@ -230,7 +230,7 @@ Captura sequências de movimentos para treinar a IA.
 python coletor_dados.py
 ```
 
-⚠️ **Aviso importante**
+ **Aviso importante**
 
 O repositório **já inclui um dataset base** em:
 
@@ -264,7 +264,7 @@ Total ideal:
 
 ---
 
-# 🧠 2️⃣ Treinar modelo
+# 2. Treinar modelo
 
 Treina a rede neural LSTM.
 
@@ -285,7 +285,7 @@ resultados/matriz_confusao.png
 
 ---
 
-# 🎥 3️⃣ Detecção em tempo real
+# 3. Detecção em tempo real
 
 Executa reconhecimento de Libras via webcam.
 
@@ -377,27 +377,27 @@ Interface web
 
 Pull requests são bem-vindos.
 
-1️⃣ Fork o projeto  
+1. Fork o projeto  
 
-2️⃣ Crie uma branch
+2. Crie uma branch
 
 ```bash
 git checkout -b minha-feature
 ```
 
-3️⃣ Commit
+3. Commit
 
 ```bash
 git commit -m "Nova feature"
 ```
 
-4️⃣ Push
+4. Push
 
 ```bash
 git push origin minha-feature
 ```
 
-5️⃣ Abra um Pull Request
+5. Abra um Pull Request
 
 ---
 
