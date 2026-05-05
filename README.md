@@ -1,36 +1,36 @@
-# 🤟 Libridge
-### Sistema de Reconhecimento de Libras com Inteligência Artificial
+# Libridge
+### Sign Language Recognition System with Artificial Intelligence
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-DeepLearning-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-HandTracking-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-**Libridge** é um sistema de **reconhecimento de Libras (Língua Brasileira de Sinais)** utilizando **Visão Computacional e Deep Learning**.
+**Libridge** is a **Sign Language (LIBRAS) recognition system** using **Computer Vision and Deep Learning**.
 
-O projeto utiliza:
+The project uses:
 
-- **MediaPipe Hand Tracking** para detectar mãos
-- **TensorFlow / Keras (LSTM)** para reconhecimento de sequências
-- **OpenCV** para captura de vídeo
-- **Machine Learning sequencial** para identificar movimentos e sinais
+- **MediaPipe Hand Tracking** for hand detection
+- **TensorFlow / Keras (LSTM)** for sequence recognition
+- **OpenCV** for video capture
+- **Sequential Machine Learning** to identify movements and signs
 
-O objetivo é criar uma **ponte entre comunicação em Libras e sistemas computacionais.**
+The goal is to create a **bridge between Sign Language communication and computer systems**.
 
 ---
 
-# 📋 Requisitos
+# Requirements
 
-Para executar o projeto corretamente, recomenda-se:
+To run the project correctly, it is recommended to have:
 
 - **Python 3.11**
 - Webcam
-- Sistema operacional: **Windows, Linux ou Mac**
+- Operating System: **Windows, Linux, or Mac**
 
- Algumas bibliotecas como **TensorFlow** e **MediaPipe** podem apresentar incompatibilidade com versões mais novas do Python.  
-Por isso o projeto foi desenvolvido e testado utilizando **Python 3.11**.
+Some libraries like **TensorFlow** and **MediaPipe** may have compatibility issues with newer Python versions.
+Therefore, the project was developed and tested using **Python 3.11**.
 
-Para verificar sua versão do Python:
+To check your Python version:
 
 ```bash
 python --version
@@ -38,65 +38,65 @@ python --version
 
 ---
 
-# 📸 Demonstração
+# Demonstration
 
-## Detecção de mãos
+## Hand Detection
 
-![Detecção](projeto_libras/Images/hand_detection.png)
-
----
-
-## Interface do coletor de dados
-
-![Coletor](projeto_libras/Images/data_collector.png)
+![Detection](projeto_libras/Images/hand_detection.png)
 
 ---
 
-## Treinamento da IA
+## Data Collector Interface
 
-![Treinamento](projeto_libras/Images/training_accuracy.png)
-
----
-
-## Matriz de Confusão
-
-![Confusão](projeto_libras/Images/confusion_matrix.png)
+![Collector](projeto_libras/Images/data_collector.png)
 
 ---
 
-# 🧠 Como funciona
+## AI Training
 
-O Libridge funciona em **3 etapas principais**:
+![Training](projeto_libras/Images/training_accuracy.png)
 
-### 1. Coleta de dados
+---
 
-A webcam captura **sequências de movimento da mão**.
+## Confusion Matrix
 
-Cada sequência contém:
+![Confusion](projeto_libras/Images/confusion_matrix.png)
+
+---
+
+# How It Works
+
+Libridge works in **3 main steps**:
+
+### 1. Data Collection
+
+The webcam captures **hand movement sequences**.
+
+Each sequence contains:
 
 20 frames  
-21 landmarks da mão  
-3 coordenadas (x,y,z)
+21 hand landmarks  
+3 coordinates (x,y,z)
 
-Total por frame:
+Total per frame:
 
 21 × 3 = 63 features
 
-Total por sequência:
+Total per sequence:
 
 20 × 63 = 1260 features
 
-Esses dados são salvos no dataset:
+This data is saved in the dataset:
 
 dados/dataset_libras.csv
 
 ---
 
-### 2. Treinamento da IA
+### 2. AI Training
 
-A rede neural usa **LSTM (Long Short-Term Memory)** para aprender **movimentos ao longo do tempo**.
+The neural network uses **LSTM (Long Short-Term Memory)** to learn **movements over time**.
 
-Arquitetura:
+Architecture:
 
 LSTM (128)  
 Dropout  
@@ -112,27 +112,27 @@ Dense (32)
 
 Softmax
 
-Saída:
+Output:
 
 26 classes (A-Z)
 
 ---
 
-### 3. Detecção em tempo real
+### 3. Real-Time Detection
 
-O sistema:
+The system:
 
-1. Captura frames da webcam
-2. Detecta a mão
-3. Extrai landmarks
-4. Forma uma sequência
-5. A IA prevê a letra
+1. Captures webcam frames
+2. Detects the hand
+3. Extracts landmarks
+4. Forms a sequence
+5. AI predicts the letter
 
-Tudo em **tempo real**.
+All in **real-time**.
 
 ---
 
-# 🗂 Estrutura do Projeto
+# Project Structure
 
 ```
 libridge/
@@ -159,9 +159,9 @@ libridge/
 
 ---
 
-# ⚙️ Instalação
+# Installation
 
-## 1. Clonar o projeto
+## 1. Clone the project
 
 ```bash
 git clone https://github.com/seu-usuario/libridge.git
@@ -170,7 +170,7 @@ cd libridge
 
 ---
 
-## 2. Criar ambiente virtual (Python 3.11 recomendado)
+## 2. Create virtual environment (Python 3.11 recommended)
 
 ### Linux / Mac
 
@@ -188,15 +188,15 @@ venv\Scripts\activate
 
 ---
 
-## 3. Instalar dependências
+## 3. Install dependencies
 
-Recomendado usar o comando abaixo para garantir que o **pip correto do ambiente virtual** seja utilizado:
+It is recommended to use the command below to ensure the **correct pip from the virtual environment** is used:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Caso o arquivo **requirements.txt** não exista, instale manualmente:
+If the **requirements.txt** file does not exist, install manually:
 
 ```bash
 pip install tensorflow opencv-python mediapipe pandas numpy scikit-learn seaborn matplotlib joblib scipy
@@ -204,9 +204,9 @@ pip install tensorflow opencv-python mediapipe pandas numpy scikit-learn seaborn
 
 ---
 
-# ▶️ Como usar
+# How to Use
 
-Execute o menu principal:
+Run the main menu:
 
 ```bash
 python main.py
@@ -214,105 +214,105 @@ python main.py
 
 Menu:
 
-1. Coletar dados  
-2. Treinar IA  
-3. Detectar em tempo real  
-4. Estatísticas  
-5. Sair  
+1. Collect data  
+2. Train AI  
+3. Real-time detection  
+4. Statistics  
+5. Exit  
 
 ---
 
-# 1. Coletar dados
+# 1. Collect Data
 
-Captura sequências de movimentos para treinar a IA.
+Captures movement sequences to train the AI.
 
 ```bash
 python coletor_dados.py
 ```
 
- **Aviso importante**
+**Important warning**
 
-O repositório **já inclui um dataset base** em:
+The repository **already includes a base dataset** in:
 
 ```
 dados/dataset_libras.csv
 ```
 
-Portanto **não é obrigatório coletar os dados novamente** para treinar o modelo.
+Therefore, **it is not mandatory to collect data again** to train the model.
 
-Você pode:
+You can:
 
-- utilizar o dataset existente
-- complementar com novos dados
-- ou criar seu próprio dataset
+- use the existing dataset
+- complement with new data
+- or create your own dataset
 
-Controles:
+Controls:
 
-ESPACO → iniciar/parar gravação  
-N → próxima letra  
-P → letra anterior  
-S → salvar dataset  
-ESC → sair  
+SPACE → start/stop recording  
+N → next letter  
+P → previous letter  
+S → save dataset  
+ESC → exit  
 
-Recomendado:
+Recommended:
 
-30 sequências por letra
+30 sequences per letter
 
 Total ideal:
 
-26 letras × 30 = 780 amostras
+26 letters × 30 = 780 samples
 
 ---
 
-# 2. Treinar modelo
+# 2. Train Model
 
-Treina a rede neural LSTM.
+Trains the LSTM neural network.
 
 ```bash
 python treinador.py
 ```
 
-Saídas:
+Outputs:
 
 modelos/melhor_modelo_libras.keras  
 modelos/label_encoder.pkl  
 modelos/config.pkl  
 
-Resultados gerados:
+Generated results:
 
 resultados/historico_treinamento.png  
 resultados/matriz_confusao.png  
 
 ---
 
-# 3. Detecção em tempo real
+# 3. Real-Time Detection
 
-Executa reconhecimento de Libras via webcam.
+Runs Sign Language recognition via webcam.
 
 ```bash
 python detector_tempo_real.py
 ```
 
-Interface mostra:
+Interface shows:
 
- letra detectada  
- confiança  
- FPS  
- landmarks da mão  
-
----
-
-# 📊 Estatísticas do dataset
-
-Mostra:
-
-- total de amostras
-- letras existentes
-- sequências por letra
+detected letter  
+confidence  
+FPS  
+hand landmarks  
 
 ---
 
-# 🧪 Exemplo de dataset
+# Dataset Statistics
+
+Shows:
+
+- total samples
+- existing letters
+- sequences per letter
+
+---
+
+# Dataset Example
 
 ```
 letra,f0_x0,f0_y0,f0_z0,f0_x1,f0_y1,f0_z1...
@@ -320,22 +320,22 @@ A,0.89,0.73,-0.0000009,0.79,0.73,-0.02...
 A,0.88,0.72,-0.0000009,0.78,0.73,-0.03...
 ```
 
-Cada linha representa uma sequência completa de movimento.
+Each row represents a complete movement sequence.
 
 ---
 
-# 📈 Resultados
+# Results
 
-Exemplo obtido no treinamento:
+Example obtained in training:
 
 Accuracy: ~99%  
-Loss: baixo  
+Loss: low  
 
-Matriz de confusão quase perfeita.
+Almost perfect confusion matrix.
 
 ---
 
-# 🚀 Tecnologias usadas
+# Technologies Used
 
 Python  
 
@@ -357,70 +357,70 @@ Seaborn
 
 ---
 
-# 🧩 Melhorias futuras
+# Future Improvements
 
-Reconhecimento de palavras  
+Word recognition  
 
-Tradução Libras → Texto  
+Sign Language → Text translation  
 
-Tradução Libras → Voz  
+Sign Language → Voice translation  
 
-Modelo mais robusto (Transformer)  
+More robust model (Transformer)  
 
-Dataset maior  
+Larger dataset  
 
-Interface web  
+Web interface  
 
 ---
 
-# 🤝 Contribuindo
+# Contributing
 
-Pull requests são bem-vindos.
+Pull requests are welcome.
 
-1. Fork o projeto  
+1. Fork the project  
 
-2. Crie uma branch
+2. Create a branch
 
 ```bash
-git checkout -b minha-feature
+git checkout -b my-feature
 ```
 
 3. Commit
 
 ```bash
-git commit -m "Nova feature"
+git commit -m "New feature"
 ```
 
 4. Push
 
 ```bash
-git push origin minha-feature
+git push origin my-feature
 ```
 
-5. Abra um Pull Request
+5. Open a Pull Request
 
 ---
 
-# 📜 Licença
+# License
 
-Este projeto está sob a licença MIT.
+This project is under the MIT license.
 
 ---
 
-# 👨‍💻 Autor
+# Author
 
-Projeto desenvolvido por:
+Project developed by:
 
 José Aquino Junior
 
-Estudante de tecnologia Desenvolvedor de Software e entusiasta de IAs.
+Technology student, Software Developer, and AI enthusiast.
 
 ---
 
-# ⭐ Apoie o projeto
+# Support the Project
 
-Se gostou do projeto:
+If you liked the project:
 
-⭐ Deixe uma estrela no repositório  
-🤝 Compartilhe  
-💡 Contribua
+⭐ Leave a star on the repository  
+🤝 Share  
+💡 Contribute
